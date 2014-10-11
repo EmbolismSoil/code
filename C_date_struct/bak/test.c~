@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+Void GetMemory2(char **p, int num)
+{
+*p = (char *)malloc(num);
+}
+void main(void)
+{
+char *str = NULL;
+GetMemory(&str, 100);
+strcpy(str, "hello");	
+printf(str);	
+}

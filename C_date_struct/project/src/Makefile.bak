@@ -1,0 +1,11 @@
+vpath %.h /study/code/C_date_struct/project/include
+vpath %.c /study/code/C_date_struct/project/src
+OBJ=FIFO.o b_tree.o
+TARGET=$(OBJ)
+all: FIFO.o b_tree.o
+FIFO.o b_tree.o: FIFO.c b_tree.c
+	gcc -c -I /study/code/C_date_struct/project/include  FIFO.c
+	gcc -c -I /study/code/C_date_struct/project/include  b_tree.c
+.PHONY : clean
+clean:
+	rm *.o

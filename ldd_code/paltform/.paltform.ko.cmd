@@ -1,0 +1,1 @@
+cmd_/study/code/ldd_code/paltform/paltform.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.13.0-35-generic/scripts/module-common.lds --build-id  -o /study/code/ldd_code/paltform/paltform.ko /study/code/ldd_code/paltform/paltform.o /study/code/ldd_code/paltform/paltform.mod.o
