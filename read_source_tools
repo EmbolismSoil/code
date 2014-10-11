@@ -1,0 +1,17 @@
+ubuntu下查看源代码工具：ctags+taglist，另加understand，有需要的朋友可以参考下。
+
+
+1.ctags直接apt-get就行，安装完后在需要的目录下执行：
+
+ctags -R*
+
+目的是建立个源代码文件的索引。然后就可以实现各函数间的跳转了。
+
+2.taglist需要自己下载，下载完了正常安装，它是联合vim使用的，因此可以在vimrc下配置一些选项。若不是打开vim自动就自动启动taglist，在vim下键入：Tlist就可打开和关闭taglist。使用taglist可以查看文件有哪些函数和变量，配合ctags使用，还可以知道该文件中的函数在哪一个文件中定义（跳转到的文件路径会自动显示，这个很好）。
+
+3.另外还有一个可以查看一个工程下各函数调用关系的软件——understand，要自己下载，解压以后运行understad可执行文件，注意要在windows下运行keygen.exe获取激活码，再到linux下注册。注册完后，在.bashrc中配置环境变量：
+
+export PATH=$PATH:/home/myname/scitools/bin/linux32
+
+这样就可以在任意目录打开understand了。understand用法：先要把源码包倒进project，然后使用它的各种功能例如生成函数调用图。我目前只使用了生成函数调用图的功能，由于
+我的工程源代码中有很多函数指针等造成的函数名一直变化的情况，所以用understand效果不是很好，它不能找到函数指针表示的一些接口函数的调用关系。
