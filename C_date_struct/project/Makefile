@@ -3,7 +3,7 @@ vpath %.c /study/code/C_date_struct/project/src
 vpath %.o /study/code/C_date_struct/project/src
 
 
-export PRONAME=thread_tree
+export PRONAME=MaxHeap
 export PRODIR=$(shell pwd)
 INCDIR=/study/code/C_date_struct/project/include
 SRCDIR=/study/code/C_date_struct/project/src
