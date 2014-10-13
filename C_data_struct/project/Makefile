@@ -5,8 +5,8 @@ vpath %.o /study/code/C_date_struct/project/src
 
 export PRONAME=MaxHeap
 export PRODIR=$(shell pwd)
-INCDIR=/study/code/C_date_struct/project/include
-SRCDIR=/study/code/C_date_struct/project/src
+INCDIR=$(PRODIR)/include/
+SRCDIR=$(PRODIR)/src/
 PRODIR=$(shell pwd)
 
 SRC=$(filter %.c ,$(shell ls $(SRCDIR)))
@@ -17,7 +17,8 @@ FLAGS= -g
 LDFLAGS = 
 
 
-all : $(OBJS) 
+all : $(OBJS)
+	
 $(OBJS) : $(SRC) $(INC)
 	make -C $(SRCDIR) TARGET="$(OBJS)" 
 

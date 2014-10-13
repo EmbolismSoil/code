@@ -1,0 +1,12 @@
+vpath %.c /study/code/C_date_struct/project/src
+vpath %.h /study/code/C_date_struct/project/include
+
+INCDIR=/study/code/C_data_struct/project/include
+OBJS=$(TARGET)
+CC=gcc
+FLAGS= -g -c -I 
+
+all:$(OBJS)
+	$(CC) $(OBJS) -o $(PRONAME)
+$(OBJS):%.o:%.c
+	$(CC) $(FLAGS) $(INCDIR) $< 
