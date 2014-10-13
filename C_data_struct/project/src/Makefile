@@ -7,7 +7,7 @@ INCDIR= -I /study/code/C_data_struct/project/include
 
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(PRONAME) $(PRODIR)
+	$(CC) $(OBJ) -o $(PRODIR)/$(PRONAME)
 $(OBJ):%.o:%.c	
 	$(CC) $(FLAGS) $(INCDIR) $<
 

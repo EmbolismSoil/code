@@ -1,6 +1,6 @@
-vpath %.h /study/code/C_date_struct/project/include
-vpath %.c /study/code/C_date_struct/project/src
-vpath %.o /study/code/C_date_struct/project/src
+vpath %.h /study/code/C_data_struct/project/include
+vpath %.c /study/code/C_data_struct/project/src
+vpath %.o /study/code/C_data_struct/project/src
 
 
 export PRONAME=MaxHeap
