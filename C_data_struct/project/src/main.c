@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include "max_heap.h"
+#include "graph.h"
 
 void main(void)
 {
-   MaxHeapCreat(Heap,100);
-   MaxHeapInsertKey(&Heap, 100);
-   printf("the max iterm is : %d\n", MaxHeapDelectKey(&Heap));
+   DECLARE_GRAPH(test,10,NULL,NULL);
 }

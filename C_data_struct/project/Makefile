@@ -3,7 +3,7 @@ vpath %.c /study/code/C_data_struct/project/src
 vpath %.o /study/code/C_data_struct/project/src
 
 
-export PRONAME=MaxHeap
+export PRONAME=Graph
 export PRODIR=$(shell pwd)
 INCDIR=$(PRODIR)/include/
 SRCDIR=$(PRODIR)/src/
