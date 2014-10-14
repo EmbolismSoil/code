@@ -15,11 +15,11 @@
 	__name->NumArc = __arcs;\
 	if (!__verfunction) \
 	    __name->GetVertex = DefaultGetVertex;\
+	else __name->GetVertex = __verfunction;\
 	if (!__arcfunction) \
 	    __name->GetArc = DefaultGetArc;\
-	__name->GetVertex = __verfunction;\
-	__name->GetArc = __arcfunction
-
+	else __name->GetArc = __arcfunction
+	
 #define DEBUG_CHECK_ASSERT(__condiction) \
 	if ((__condiction)){\
 	    printf("error : " #__condiction" is failed!\n");\

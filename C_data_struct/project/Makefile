@@ -11,7 +11,7 @@ PRODIR=$(shell pwd)
 
 SRC=$(filter %.c ,$(shell ls $(SRCDIR)))
 OBJS=$(filter %.o,$(subst .c,.o, $(SRC)))
-INC=$(shell ls $(INCDIR))
+INC=$(filter %.h,$(shell ls $(INCDIR)))
 CC=gcc
 FLAGS= -g
 LDFLAGS = 
@@ -24,7 +24,8 @@ $(OBJS) : $(SRC) $(INC)
 
 .PHONY:clean
 clean :
-	@-rm *.o
-	@-rm *.out
-	@-rm $(PRONAME)
+	-rm *.o
+	-rm *.out
+	-rm $(PRONAME)
+	-rm $(INCDIR)/*.h~
 	-make -C $(SRCDIR) clean 
